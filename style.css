@@ -1,0 +1,634 @@
+/* ============================================================
+Court – ntfy Anleitung
+style.css
+
+Diese Datei enthält ausschließlich das Design der Website.
+Der eigentliche Inhalt befindet sich in index.html.
+
+Aufbau:
+
+1. Grundfarben und Variablen
+2. Grundlegendes Seitenlayout
+3. Kopfbereich / Hero
+4. Warnhinweise
+5. Inhaltsbereich und Navigation
+6. Karten und Abschnitte
+7. Schritt-für-Schritt-Anleitungen
+8. Buttons und Links
+9. Codeblöcke
+10. FAQ
+11. Footer
+12. Responsive Design für Smartphones
+    ============================================================ */
+
+/* ============================================================
+
+1. GRUNDFARBEN UND VARIABLEN
+
+Hier kannst du später sehr einfach das komplette Farbschema
+der Website verändern.
+
+Beispiel:
+--primary: #247a4a;
+
+Ändere diesen Wert und Buttons, Links und andere Elemente,
+die diese Farbe verwenden, ändern sich automatisch.
+============================================================ */
+
+:root {
+/* Hintergrund der gesamten Website */
+--bg: #f5f6f4;
+
+/* Hintergrund von Karten und Inhaltsbereichen */
+--surface: #ffffff;
+
+/* Leicht abgesetzte Flächen */
+--surface-soft: #eef1ed;
+
+/* Hauptfarbe für Buttons und Links */
+--primary: #28784b;
+
+/* Dunklere Variante der Hauptfarbe für Hover-Zustände */
+--primary-dark: #1d5d3a;
+
+/* Normaler Text */
+--text: #17201a;
+
+/* Weniger wichtiger Text */
+--muted: #667068;
+
+/* Rahmen */
+--border: #dce2dd;
+
+/* Hintergrund für Warnungen */
+--warning-bg: #fff8df;
+
+/* Rahmen von Warnungen */
+--warning-border: #ead27b;
+
+/* Text von Warnungen */
+--warning-text: #644e00;
+
+/* Hintergrund für hervorgehobene Links */
+--primary-soft: #edf6f0;
+
+/* Rahmen für hervorgehobene Links */
+--primary-border: #cee1d4;
+
+/* Schatten für Karten */
+--shadow:
+0 8px 24px rgba(20, 30, 24, 0.07);
+
+/* Einheitlicher Radius */
+--radius: 16px;
+
+/* Schriftgrößen können hier zentral angepasst werden */
+--text-small: 0.9rem;
+--text-normal: 1rem;
+--text-large: 1.1rem;
+}
+
+/* ============================================================
+2. GRUNDLEGENDES SEITENLAYOUT
+
+box-sizing sorgt dafür, dass Padding und Border bei der
+Größenberechnung eines Elements berücksichtigt werden.
+
+Dadurch verhält sich CSS wesentlich vorhersehbarer.
+============================================================ */
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+
+/* Moderne Systemschrift ohne externe Schriftdatei */
+font-family:
+Inter,
+ui-sans-serif,
+system-ui,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+sans-serif;
+
+background: var(--bg);
+color: var(--text);
+
+font-size: var(--text-normal);
+line-height: 1.65;
+}
+
+/* Links verwenden automatisch unsere Vereinsfarbe. */
+
+a {
+color: var(--primary);
+}
+
+/* Bilder bleiben innerhalb ihres Containers. */
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+/* ============================================================
+3. KOPFBEREICH / HERO
+
+Der Hero ist der große Bereich ganz oben auf der Seite.
+============================================================ */
+
+header {
+color: white;
+
+/*
+Zwei Hintergrundverläufe werden übereinander gelegt.
+
+```
+Der erste erzeugt den leichten Lichtschein rechts oben.
+Der zweite bildet den eigentlichen dunklen Hintergrund.
+```
+
+*/
+background:
+radial-gradient(
+circle at top right,
+rgba(80, 180, 115, 0.20),
+transparent 35%
+),
+linear-gradient(
+135deg,
+#151b17,
+#234833
+);
+
+padding: 64px 24px 52px;
+}
+
+/*
+Hero und Hauptinhalt benutzen dieselbe maximale Breite.
+*/
+
+.hero,
+main {
+width: min(1080px, calc(100% - 32px));
+margin: 0 auto;
+}
+
+/* Kleine Kennzeichnung oberhalb der Überschrift. */
+
+.badge {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+
+padding: 7px 11px;
+margin-bottom: 18px;
+
+border: 1px solid rgba(255, 255, 255, 0.18);
+border-radius: 999px;
+
+background: rgba(255, 255, 255, 0.10);
+
+font-size: 0.85rem;
+}
+
+/* Hauptüberschrift. */
+
+.hero h1 {
+margin: 0 0 12px;
+
+/*
+clamp() sorgt dafür, dass die Schriftgröße auf kleinen
+Bildschirmen automatisch kleiner wird.
+*/
+font-size: clamp(2rem, 5vw, 3.6rem);
+
+line-height: 1.08;
+}
+
+/* Beschreibung unter der Hauptüberschrift. */
+
+.hero p {
+max-width: 760px;
+margin: 0;
+
+color: rgba(255, 255, 255, 0.84);
+
+font-size: 1.05rem;
+}
+
+/* ============================================================
+4. HAUPTBEREICH UND WARNHINWEISE
+============================================================ */
+
+main {
+padding: 32px 0 72px;
+}
+
+/*
+Gelber Hinweisblock.
+
+Wird beispielsweise für den Hinweis verwendet, dass ein
+persönliches ntfy-Topic nicht geteilt werden sollte.
+*/
+
+.notice {
+margin-bottom: 28px;
+padding: 18px 20px;
+
+background: var(--warning-bg);
+border: 1px solid var(--warning-border);
+border-radius: var(--radius);
+
+color: var(--warning-text);
+}
+
+/* ============================================================
+5. INHALTSBEREICH UND NAVIGATION
+
+Auf großen Bildschirmen:
+Navigation | Inhalt
+
+Auf Smartphones:
+Navigation
+Inhalt
+============================================================ */
+
+.layout {
+display: grid;
+
+/*
+Die Navigation bekommt eine feste Breite.
+Der Hauptinhalt erhält den restlichen Platz.
+*/
+grid-template-columns: 240px minmax(0, 1fr);
+
+gap: 28px;
+
+align-items: start;
+}
+
+/*
+Inhaltsverzeichnis.
+
+sticky bedeutet:
+Beim Scrollen bleibt die Navigation auf dem Bildschirm.
+*/
+
+nav {
+position: sticky;
+top: 20px;
+
+padding: 16px;
+
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius);
+
+box-shadow: var(--shadow);
+}
+
+/* Überschrift im Inhaltsverzeichnis */
+
+nav strong {
+display: block;
+margin-bottom: 10px;
+}
+
+/* Links innerhalb der Navigation */
+
+nav a {
+display: block;
+
+padding: 7px 9px;
+
+border-radius: 10px;
+
+color: var(--primary);
+text-decoration: none;
+
+transition:
+background-color 140ms ease,
+transform 140ms ease;
+}
+
+/* Hover-Effekt */
+
+nav a:hover {
+background: var(--surface-soft);
+transform: translateX(2px);
+}
+
+/* ============================================================
+6. INHALTS-KARTEN UND ABSCHNITTE
+============================================================ */
+
+section {
+margin-bottom: 20px;
+padding: 28px;
+
+background: var(--surface);
+
+border: 1px solid var(--border);
+border-radius: var(--radius);
+
+box-shadow: var(--shadow);
+}
+
+/* Abschnittsüberschrift */
+
+h2 {
+margin-top: 0;
+
+font-size: 1.65rem;
+
+line-height: 1.25;
+}
+
+/* Unterüberschrift */
+
+h3 {
+margin-top: 28px;
+margin-bottom: 10px;
+
+font-size: 1.15rem;
+}
+
+/* ============================================================
+7. SCHRITT-FÜR-SCHRITT-ANLEITUNGEN
+============================================================ */
+
+.steps {
+display: grid;
+gap: 14px;
+
+margin-top: 18px;
+}
+
+/*
+Jeder einzelne Schritt wird als kleine Karte dargestellt.
+
+grid-template-columns:
+Nummer | Text
+*/
+
+.step {
+display: grid;
+
+grid-template-columns: 42px 1fr;
+
+gap: 14px;
+
+align-items: start;
+
+padding: 16px;
+
+background: var(--surface-soft);
+
+border-radius: 14px;
+}
+
+/* Nummer eines Schrittes */
+
+.step-number {
+width: 32px;
+height: 32px;
+
+display: grid;
+place-items: center;
+
+border-radius: 50%;
+
+background: var(--primary);
+color: white;
+
+font-weight: 700;
+}
+
+/* ============================================================
+8. BUTTONS UND HERVORGEHOBENE LINKS
+============================================================ */
+
+.button {
+display: inline-block;
+
+padding: 10px 14px;
+
+background: var(--primary);
+color: white;
+
+border-radius: 10px;
+
+font-weight: 650;
+text-decoration: none;
+
+transition:
+background-color 140ms ease,
+transform 140ms ease,
+box-shadow 140ms ease;
+}
+
+/* Wenn die Maus über dem Button liegt */
+
+.button:hover {
+background: var(--primary-dark);
+
+transform: translateY(-1px);
+
+box-shadow:
+0 5px 14px rgba(25, 60, 40, 0.16);
+}
+
+/*
+Eine spezielle Box für Links, die besonders wichtig sind.
+*/
+
+.link-card {
+display: flex;
+
+flex-wrap: wrap;
+
+gap: 12px;
+
+align-items: center;
+
+margin: 18px 0;
+padding: 16px;
+
+background: var(--primary-soft);
+
+border:
+1px solid var(--primary-border);
+
+border-radius: 14px;
+}
+
+/* ============================================================
+9. CODE UND TECHNISCHE INFORMATIONEN
+============================================================ */
+
+code,
+pre {
+font-family:
+ui-monospace,
+SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+monospace;
+}
+
+/* Kleiner Inline-Code */
+
+code {
+padding: 2px 6px;
+
+background: #eef0ed;
+
+border-radius: 7px;
+
+word-break: break-word;
+}
+
+/*
+Größere Codeblöcke.
+*/
+
+pre {
+margin: 16px 0;
+
+padding: 16px;
+
+overflow-x: auto;
+
+background: #18201b;
+color: #eef5ef;
+
+border-radius: 12px;
+
+line-height: 1.5;
+}
+
+/* ============================================================
+10. FAQ
+============================================================ */
+
+/*
+FAQ-Elemente werden durch eine horizontale Linie getrennt.
+*/
+
+.faq-item {
+padding: 16px 0;
+
+border-top:
+1px solid var(--border);
+}
+
+/*
+Beim ersten FAQ-Eintrag brauchen wir keine Linie oben.
+*/
+
+.faq-item:first-child {
+padding-top: 0;
+border-top: 0;
+}
+
+/* ============================================================
+11. FOOTER
+============================================================ */
+
+footer {
+width: min(1080px, calc(100% - 32px));
+
+margin: 0 auto;
+
+padding: 0 0 40px;
+
+color: var(--muted);
+
+font-size: 0.9rem;
+}
+
+/* ============================================================
+12. RESPONSIVE DESIGN
+
+Dieser Bereich sorgt dafür, dass die Anleitung auch auf
+Smartphones gut funktioniert.
+
+Unter 820px wird die zweispaltige Ansicht zu einer
+normalen einspaltigen Ansicht.
+============================================================ */
+
+@media (max-width: 820px) {
+
+.layout {
+grid-template-columns: 1fr;
+}
+
+/*
+Die Navigation muss auf kleinen Bildschirmen nicht
+dauerhaft kleben bleiben.
+*/
+
+nav {
+position: static;
+}
+
+section {
+padding: 22px;
+}
+
+header {
+padding: 48px 20px 40px;
+}
+}
+
+/* ============================================================
+KLEINE SMARTPHONE-OPTIMIERUNG
+
+Unter 520px werden Buttons und Schritte etwas kompakter.
+============================================================ */
+
+@media (max-width: 520px) {
+
+main {
+width: min(100% - 20px, 1080px);
+}
+
+.hero,
+footer {
+width: min(100% - 20px, 1080px);
+}
+
+.hero h1 {
+font-size: 2.25rem;
+}
+
+section {
+padding: 18px;
+}
+
+.step {
+grid-template-columns: 34px 1fr;
+gap: 10px;
+padding: 13px;
+}
+
+.step-number {
+width: 28px;
+height: 28px;
+font-size: 0.9rem;
+}
+
+.button {
+width: 100%;
+text-align: center;
+}
+}
