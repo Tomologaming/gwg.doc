@@ -18,7 +18,7 @@
 
   <header>
     <div class="hero">
-      <div class="badge">📱 Court · ntfy</div>
+      <div class="badge">Court · ntfy</div>
 
       <h1>ntfy einrichten</h1>
 
@@ -33,9 +33,11 @@
 
     <div class="notice">
       <strong>Wichtig:</strong>
-      Dein persönlicher ntfy-Topic ist nur für dich bestimmt.
+      Dein persönliches ntfy-Topic ist nur für dich bestimmt.
       Teile ihn nicht öffentlich und gib ihn nicht an andere
-      Personen weiter.
+      Personen weiter, da jeder mit Zugriff auf deine Systemnachrichten
+      zugreifen kann und dir über "curl" fast unbegrenzt viele und nicht zeitversetzte
+      Pushnachrichten senden kann.
     </div>
 
     <div class="layout">
@@ -62,7 +64,7 @@
 
           <p>
             Court erstellt für jeden Benutzer automatisch ein
-            persönliches, zufälliges ntfy-Topic. Dieses Topic
+            persönliches, zufälliges, kryptographisches ntfy-Topic. Dieses Topic
             wird verwendet, damit Court deine Benachrichtigungen
             gezielt an dich schicken kann.
           </p>
@@ -98,17 +100,12 @@
                   Installiere die offizielle ntfy-App auf deinem
                   Android-Gerät.
                 </p>
-
-                <!--
-                  Hier den echten Google-Play-Link einsetzen.
-                -->
                 <a
                   class="button"
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=io.heckel.ntfy"
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ntfy im Play Store öffnen
+                  rel="noopener noreferrer">
+                  ntfy im Play Store herunterladen
                 </a>
               </div>
             </div>
@@ -125,6 +122,7 @@
                     Benachrichtigungen → ntfy einrichten
                   </strong>.
                 </p>
+                <a class="button" href="gwg.tennis.book.gwg.tennis.book.workers.dev">Court öffnen</a>
               </div>
             </div>
 
@@ -155,17 +153,35 @@
                 </p>
               </div>
             </div>
-
+<br>
           </div>
-
-          <h3>Test</h3>
-
-          <p>
-            Anschließend kannst du in Court auf
-            <strong>„Test senden“</strong> klicken.
-            Wenn alles funktioniert, solltest du kurz danach
-            eine Testbenachrichtigung erhalten.
-          </p>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div>
+              <strong>Testen</strong>
+    
+              <p>
+                Anschließend kannst du in Court auf
+                <strong>„Test senden“</strong> klicken.
+                Wenn alles funktioniert, solltest du kurz danach
+                eine Testbenachrichtigung erhalten.
+                <br>
+                Andernfalls kannst du diesen befehl in dein Computer Terminal
+                eintragen:
+                <br>
+                "curl -d "Test successful 😀" ntfy.sh/Dein_Topic".
+                <button onclick="kopiereText()">Command kopieren</button>
+                <br>
+                Wenn alles richtig ist, sollte Test successful 😀 als Nachricht kommen.
+                Bei Problemen gerne 
+                <span>
+                  <a href="mailto:gwg.tennis.book@gmail.com">HIER</a>
+                </span> 
+                melden.
+                
+              </p>
+            </div>
+          </div>
         </section>
 
         <!-- iOS -->
@@ -189,11 +205,11 @@
                 -->
                 <a
                   class="button"
-                  href="#"
+                  href="https://apps.apple.com/de/app/ntfy/id1625396347"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  ntfy im App Store öffnen
+                  ntfy im App Store installieren
                 </a>
               </div>
             </div>
@@ -208,6 +224,7 @@
                   Öffne in Court dein ntfy-Onboarding und
                   kopiere dein persönliches Topic.
                 </p>
+                <a class="button" href="gwg.tennis.book.gwg.tennis.book.workers.dev">Court öffnen</a>
               </div>
             </div>
 
@@ -286,12 +303,27 @@
             Court und übernimm den dort angezeigten Topic-Namen
             in den verwendeten Client.
           </p>
+          <a class="button" href="gwg.tennis.book.gwg.tennis.book.workers.dev">Court öffnen</a>
 
           <p>
             Ein Topic sieht beispielsweise so aus:
           </p>
 
           <pre>gwg-ntfy-1234567890abcdef1234567890abcdef</pre>
+
+          <h4>Eine mögliche Installationsart für Android Handys ohne Google Play Store über den F-Droid-Store.</h4>
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <strong>APK Datei erhalten</strong>
+              <p>Um eine externe App auf Android zu installieren brauchst du eine APK Datei. Diese kannst du beispielswiese im F-Droid-Store erhalten oder über das offiziellen Github Repository.</p>
+              <p>Der Ersteller der App hat F-Droid auf seiner <span><a href="ntfy.sh">WEBSITE</a></span> verlinkt, daher wird diese Installationsquelle vorraussichtlich keinen Virus enthalten, jedoch handelt es sich nicht um eine seriöse Quelle.</p>
+              <a class="button" href="https://f-droid.org/en/packages/io.heckel.ntfy/">ntfy im F-Droid-Store installieren</a>
+            </div>
+          </div>
+            
+            
+
         </section>
 
         <!-- Fehlerbehebung -->
@@ -328,7 +360,10 @@
             </strong>
 
             <p>
-              Informiere einen Administrator und lass dein
+              Informiere einen Administrator oder mich 
+              <span>
+                <a href="mailto:gwg.tennis.book@gmail.com">HIER</a>
+              </span> und lass dein
               persönliches Topic zurücksetzen. Danach muss ntfy
               auf deinen Geräten neu eingerichtet werden.
             </p>
@@ -378,7 +413,7 @@
             <p>
               Jeder, der deinen Topic kennt, kann grundsätzlich
               mit diesem Kanal arbeiten. Deshalb solltest du ihn
-              wie ein persönliches Geheimnis behandeln und nicht
+              wie ein Passwort behandeln und nicht
               veröffentlichen.
             </p>
           </div>
@@ -429,8 +464,20 @@
   </main>
 
   <footer>
-    Court · ntfy-Anleitung · Diese Seite wird über GitHub Pages veröffentlicht.
+    Court · ntfy-Anleitung · Diese Seite wurde über GitHub Pages veröffentlicht.
   </footer>
+  
+  <script>
+function kopiereText() {
+  // Der Text, der kopiert werden soll
+  const text = 'curl -d "Test successful 😀" ntfy.sh/Dein_Topic';
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Text wurde kopiert!");
+  }).catch(err => {
+    console.error("Fehler beim Kopieren: ", err);
+  });
+}
+</script>
 
 </body>
 </html>
