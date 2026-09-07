@@ -25,14 +25,7 @@
 
   <main>
 
-    <div class="notice">
-      <strong>Wichtig:</strong>
-      Dein persönliches ntfy-Topic ist nur für dich bestimmt.
-      Teile ihn nicht öffentlich und gib ihn nicht an andere
-      Personen weiter, da jeder mit Zugriff auf deine Systemnachrichten
-      zugreifen kann und dir über "curl" fast unbegrenzt viele und nicht zeitversetzte
-      Pushnachrichten senden kann.
-    </div>
+
 
     <div class="layout">
 
@@ -41,6 +34,7 @@
         <strong>Inhalt</strong>
 
         <a href="#grundlagen">Grundlagen</a>
+        <a href="#warnung">Zu beachten</a>
         <a href="#android">Android</a>
         <a href="#ios">iPhone / iPad</a>
         <a href="#web">Web</a>
@@ -56,26 +50,37 @@
         <section id="grundlagen">
           <h2>Grundlagen</h2>
 
+          
+          <strong>Was ist ntfy und wofür brauche ich es?</strong>
           <p>
+            nfty ist ein kostenloses Pushnachrichtenprogramm, das Court nutzt, um dich direkt über
+            <ul>
+              <li>Mannschaftstermine,</li>
+              <li>Vereinsneuigkeiten,</li>
+              <li>Turnierinformationen und</li>
+              <li>wichtige Informationen aufzuklären.</li>
+            </ul>
             Court erstellt für jeden Benutzer automatisch ein
-            persönliches, zufälliges, kryptographisches ntfy-Topic. Dieses Topic
-            wird verwendet, damit Court deine Benachrichtigungen
-            gezielt an dich schicken kann.
+            persönliches, zufälliges ntfy-Topic. Court sendet dann zu gegebenen Zeitpunkten Pushnachrichten an dein Handy.
+            Das kann nützlich sein, wenn du
+            <ul>
+              <li>nicht ständig die Website öffnen möchtest,</li>
+              <li>der Verein dich dringend informieren muss und</li>
+              <li>noch vieles weiteres.</li>
+            </ul>
+            Es hört sich vielleicht erstmal komplex an, jedoch ist diese Anleitung für alle Fälle ausgelegt und dementsprechend länger. 
+            Klicke einfach in der Navigation auf dein Betriebssystem. Dort wird ausführlich beschrieben, wie man es einrichten muss. Außerdem sind dort Videos verlinkt, die es ganz genau zeigen. 
           </p>
-
-          <div class="link-card">
-            <strong>Dein Topic findest du in Court unter:</strong>
-
-            <span>
-              Profil → Benachrichtigungen → ntfy einrichten
-            </span>
-          </div>
-
-          <p>
-            Du musst dein Topic normalerweise nicht selbst
-            eintippen. Je nach Gerät stellt dir Court einen
-            passenden Link oder eine Kopiermöglichkeit zur Verfügung.
-          </p>
+        </section>
+        <section id="warnung">
+        <div class="notice">
+          <strong>Wichtig:</strong>
+          Dein persönliches ntfy-Topic ist nur für dich bestimmt.
+          Teile ihn nicht öffentlich und gib ihn nicht an andere
+          Personen weiter, da jeder mit Zugriff auf deine Systemnachrichten
+          zugreifen kann und dir über "curl" fast unbegrenzt viele und nicht zeitversetzte
+          Pushnachrichten senden kann.
+        </div>
         </section>
 
         <!-- Android -->
@@ -180,7 +185,7 @@
 
         <!-- iOS -->
         <section id="ios">
-          <h2>🍎 iPhone / iPad</h2>
+          <a href="#ios" class="remove-link"><h2>🍎 iPhone / iPad</h2></a>
 
           <div class="steps">
 
@@ -195,7 +200,7 @@
                 </p>
 
                 <!--
-                  Hier den echten App-Store-Link einsetzen.
+                  Hier den echten App-Store-ulnk einsetzen.
                 -->
                 <a
                   class="button"
@@ -245,7 +250,7 @@
 
         <!-- Web -->
         <section id="web">
-          <h2>🌐 Web</h2>
+          <a href="#web" class="remove-link"><h2>🌐 Web</h2></a>
 
           <div class="steps">
 
@@ -289,7 +294,7 @@
 
         <!-- Andere Geräte -->
         <section id="andere">
-          <h2>❓ Andere Geräte / Clients</h2>
+        <a href="#andere" class="remove-link"><h2>❓ Andere Geräte / Clients</h2></a>
 
           <p>
             ntfy kann auch mit anderen kompatiblen Clients
@@ -311,7 +316,7 @@
             <div>
               <strong>APK Datei erhalten</strong>
               <p>Um eine externe App auf Android zu installieren brauchst du eine APK Datei. Diese kannst du beispielswiese im F-Droid-Store erhalten oder über das offiziellen Github Repository.</p>
-              <p>Der Ersteller der App hat F-Droid auf seiner <span><a href="ntfy.sh">WEBSITE</a></span> verlinkt, daher wird diese Installationsquelle vorraussichtlich keinen Virus enthalten, jedoch handelt es sich nicht um eine seriöse Quelle.</p>
+              <p>Der Ersteller der App hat F-Droid auf seiner <span><a href="ntfy.sh">WEBSITE</a></span> verlinkt, daher wird diese Installationsquelle vorraussichtlich keinen Virus enthalten, jedoch handelt es sich nicht um eine vollständig gesicherte, seriöse Quelle.</p>
               <a class="button" href="https://f-droid.org/en/packages/io.heckel.ntfy/">ntfy im F-Droid-Store installieren</a>
             </div>
           </div>
@@ -351,6 +356,7 @@
               Prüfe zunächst, ob ntfy auf deinem Gerät installiert
               ist und Benachrichtigungen erlaubt sind. Sende
               anschließend über Court eine Testbenachrichtigung.
+              Des Weiteren kann es sein, dass der Stummmodus aktiviert ist, kein Netz vorhanden oder ein Fokus aktiviert ist. Bitte deaktiviere den Stummmodus und den Fokus und probiere es, wenn du wieder Netz hast erneut. Ansonsten wende dich hierdran: <span><a href="mailto:gwg.tennmis.book@gmail.com">Email.</a></span>
             </p>
           </div>
 
