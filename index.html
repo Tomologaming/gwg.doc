@@ -13,6 +13,8 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Das Skript für den Web Installer laden -->
+  <script type="module" src="https://microsoft.com"></script>
 </head>
 
 <body>
@@ -312,15 +314,49 @@
 
         <!---Desktop--->
         <section id="desktop">
-          <a href="#desktop" class="remove-link"><h2>🖥️ Desktop</h2></a>
+          <a href="#desktop" class="remove-link"><h2>🖥️ Windows</h2></a>
           <div class="steps">
             <div class="step">
-              <div class="step-number">1</div>
+              <div class="step-number">1a</div>
               <div>
                 <strong>Inoffiziellen Client aus dem MS Store herunterladen</strong>
                 <p>
-                  Da es keinen offiziellen Desktop Client für ntfy gibt, kann man entweder die <a href="#web">Web-App</a>
+                  Da es keinen offiziellen Desktop Client für ntfy gibt, kann man entweder die 
                 </p>
+                  <a class="button" href="#web">Web-App nutzen</a>
+                <p>
+                  (oberhalb) oder einen inoffiziellen Client, der virengeprüft wurde, aus dem Microsoft Store herunterladen.
+                </p>
+                <p>
+                  Um den Client zu nutzen folge den Schritten:
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">1b</div>
+              <div>
+                <strong>Den Client installieren</strong>
+                <p>
+                  1. Um den Client zu installieren klicke einfach auf diesen Link.
+                </p>
+                <br>
+                <p>
+                  2. Danach öffnet sich der Microsoft Store
+                </p>
+                <br>
+                <p>
+                  3. Klicke nun auf Installieren, Herunterladen bzw. Donwload oder Install.
+                </p>
+                <!-- Der Button, der den direkten Installations-Prompt auslöst -->
+                <ms-store-badge 
+                  productid="9PJDD0JKR719" 
+                  window-mode="popup" 
+                  theme="dark" 
+                  language="de">Installieren </ms-store-badge>
+              </div>
+            </div>
+          </div>
+        </section>
           
 
         <!-- Andere Geräte -->
