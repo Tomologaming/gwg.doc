@@ -364,3 +364,14 @@ footer {
     padding: 20px;
   }
 }
+/* Verkleinert das Microsoft-Bild sauber über die Höhe */
+ms-store-badge::part(img) {
+  max-height: 60px; /* Ändern Sie diesen Wert (z.B. 35px oder 45px), um die Wunschgröße zu treffen */
+  width: auto;      /* Erlaubt der Breite, proportional zu schrumpfen */
+}
+
+/* Verhindert, dass das unsichtbare Container-Element zu viel Platz einnimmt */
+ms-store-badge {
+  display: inline-block;
+  width: auto;
+}
