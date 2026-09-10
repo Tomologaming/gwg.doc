@@ -375,3 +375,11 @@ ms-store-badge {
   display: inline-block;
   width: auto;
 }
+.up-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
