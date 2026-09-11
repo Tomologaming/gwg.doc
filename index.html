@@ -1,590 +1,82 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta
-    name="description"
-    content="Anleitung zur Einrichtung von ntfy für Court"
-  >
+    <meta
+      name="description"
+      content="Einrichtungsanleitungen für Court"
+    >
 
-  <title>ntfy einrichten – Court</title>
+    <title>Einrichtung – Court</title>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Das Skript für den Web Installer laden -->
-  <!-- Das KORREKTE Skript mit dem vollständigen Pfad laden -->
-  <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
 
-</head>
+  <body>
 
-<body>
-
-  <header>
-    <section id="up"></section>
-    <div class="hero">
-      <a class="remove-link" href="#grundlagen"><div class="badge">Court · ntfy einrichten</div></a>
-    </div>
-  </header>
-
-  <main>
-    <a href="#up" class="up-button">UP</a>
-
-
-
-    <div class="layout">
-
-      <!-- Inhaltsverzeichnis -->
-      <nav aria-label="Inhaltsverzeichnis">
-        <strong>Inhalt</strong>
-
-        <a href="#grundlagen">Grundlagen</a>
-        <a href="#warnung">Zu beachten</a>
-        <a href="#android">Android</a>
-        <a href="#ios">iPhone / iPad</a>
-        <a href="#web">Web</a>
-        <a href="#windows">Windows</a>
-        <a href="#andere">Andere Geräte</a>
-        <a href="#fehler">Fehlerbehebung</a>
-        <a href="#reset">Topic zurücksetzen</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <div>
-
-        <!-- Grundlagen -->
-        <section id="grundlagen">
-          <h2>Grundlagen</h2>
-
-          
-          <strong>Was ist ntfy und wofür brauche ich es?</strong>
-          <p>
-            nfty ist ein kostenloses Pushnachrichtenprogramm, das Court nutzt, um dich direkt über
-          </p>
-          <ul>
-            <li>Mannschaftstermine,</li>
-            <li>Vereinsneuigkeiten,</li>
-            <li>Turnierinformationen und</li>
-            <li>wichtige Informationen aufzuklären.</li>
-          </ul>
-          <p>
-            Court erstellt für jeden Benutzer automatisch ein
-            persönliches, zufälliges ntfy-Topic. Court sendet dann zu gegebenen Zeitpunkten Pushnachrichten an dein Handy.
-            Das kann nützlich sein, wenn du
-          </p>
-          <ul>
-            <li>nicht ständig die Website öffnen möchtest,</li>
-            <li>der Verein dich dringend informieren muss und</li>
-            <li>noch vieles weiteres.</li>
-          </ul>
-          <strong>Zur Einrichtung</strong>
-          <p>
-            Es hört sich vielleicht erstmal komplex an, jedoch ist diese Anleitung für alle Fälle ausgelegt und dementsprechend länger. 
-            Klicke einfach in der Navigation auf dein Betriebssystem. Dort wird ausführlich beschrieben, wie man es einrichten muss. Außerdem sind dort Videos verlinkt, die es ganz genau zeigen.
-            Falls es technische Probleme gibt, schreibe gerne eine Mail an <a href="mailto:gwg.tennis.book@gmail.com">MICH</a>.
-          </p>
-          <strong>Was ist ein (ntfy) Topic</strong>
-          <p>
-            Ein ntfy-Topic ist ein öffentlicher Kanal an den Nachrichten gesendet werden können. (Dieser Kanal wird daher keine sensiblen Informationen enthalten.)
-            Die ntfy-App ist dabei wie ein Vorleser, der den Kanal auf neue Nachrichten überprüft und dich benachrichtigt, falls welche eintreffen.
-          </p>
-        </section>
-        <section id="warnung">
-        <div class="notice">
-          <strong>Wichtig:</strong>
-          Dein persönliches ntfy-Topic ist nur für dich bestimmt.
-          Teile ihn nicht öffentlich und gib ihn nicht an andere
-          Personen weiter, da jeder mit Zugriff auf deine Systemnachrichten
-          zugreifen kann und dir über "curl" fast unbegrenzt viele und nicht zeitversetzte
-          Pushnachrichten senden kann.
-        </div>
-        </section>
-
-        <!-- Android -->
-        <section id="android">
-          <a class="remove-link"href="#android"><h2>🤖 Android</h2></a>
-
-          <div class="steps">
-
-            <div class="step">
-              <div class="step-number">1</div>
-
-              <div>
-                <strong>ntfy installieren</strong>
-
-                <p>
-                  Installiere die offizielle ntfy-App auf deinem
-                  Android-Gerät.
-                </p>
-                <a
-                  class="button"
-                  href="https://play.google.com/store/apps/details?id=io.heckel.ntfy"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  ntfy im Play Store herunterladen
-                </a>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-number">2</div>
-
-              <div>
-                <strong>Zu Court zurückkehren</strong>
-
-                <p>
-                  Öffne in deinem Court-Profil den Bereich
-                  <strong>
-                    Benachrichtigungen → ntfy einrichten
-                  </strong>.
-                </p>
-                <a class="button" href="https://gwg-tennis-book.gwg-tennis-book.workers.dev/profile">Court öffnen</a>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-number">3</div>
-
-              <div>
-                <strong>„In ntfy öffnen“ verwenden</strong>
-
-                <p>
-                  Court stellt dir einen persönlichen Link bereit.
-                  Tippe darauf, damit dein Topic direkt an die
-                  ntfy-App übergeben wird.
-                </p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-number">4</div>
-
-              <div>
-                <strong>Benachrichtigungen erlauben</strong>
-
-                <p>
-                  Erlaube ntfy die notwendigen Berechtigungen,
-                  damit dein Android-Gerät Push-Mitteilungen
-                  anzeigen kann.
-                </p>
-              </div>
-            </div>
-<br>
-          </div>
-          <div class="step">
-            <div class="step-number">5</div>
-            <div>
-              <strong>Testen</strong>
-    
-              <p>
-                Anschließend kannst du in Court auf
-                <strong>„Test senden“</strong> klicken.
-                Wenn alles funktioniert, solltest du kurz danach
-                eine Testbenachrichtigung erhalten.
-                <br>
-                Andernfalls kannst du diesen befehl in dein Computer Terminal
-                eintragen:
-                <br>
-                "curl -d "Test successful 😀" ntfy.sh/Dein_Topic".
-                <button onclick="kopiereText()">Command kopieren</button>
-                <br>
-                Wenn alles richtig ist, sollte Test successful 😀 als Nachricht kommen.
-                Bei Problemen gerne 
-                <span>
-                  <a href="mailto:gwg.tennis.book@gmail.com">HIER</a>
-                </span> 
-                melden.
-                
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- iOS -->
-        <section id="ios">
-          <a href="#ios" class="remove-link"><h2>🍎 iPhone / iPad</h2></a>
-
-          <div class="steps">
-
-            <div class="step">
-              <div class="step-number">1</div>
-
-              <div>
-                <strong>ntfy installieren</strong>
-
-                <p>
-                  Installiere die ntfy-App aus dem App Store.
-                </p>
-
-                <!--
-                  Hier den echten App-Store-ulnk einsetzen.
-                -->
-                <a
-                  class="button"
-                  href="https://apps.apple.com/de/app/ntfy/id1625396347"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ntfy im App Store installieren
-                </a>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-number">2</div>
-
-              <div>
-                <strong>Persönliches Topic kopieren</strong>
-
-                <p>
-                  Öffne in Court dein ntfy-Onboarding und
-                  kopiere dein persönliches Topic.
-                </p>
-                <a class="button" href="https://gwg-tennis-book.gwg-tennis-book.workers.dev/profile">Court öffnen</a>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-number">3</div>
-
-              <div>
-                <strong>Topic in ntfy abonnieren</strong>
-
-                <p>
-                  Öffne ntfy und füge dein persönliches Topic
-                  als neues Abonnement hinzu.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <p>
-            Anschließend kannst du in Court eine
-            Testbenachrichtigung senden.
-          </p>
-          <video controls width="400">
-          <source src="iPhone (iOS) Tutorial.mp4" type="video/mp4">
-    Dein Browser unterstützt das Video nicht.
-        </video>
-        </section>
-        
-
-        <!-- Web -->
-        <section id="web">
-          <a href="#web" class="remove-link"><h2>🌐 Web</h2></a>
-
-          <div class="steps">
-
-            <div class="step">
-              <div class="step-number">1</div>
-
-              <div>
-                <strong>ntfy im Browser öffnen</strong>
-
-                <p>
-                  Du kannst dein persönliches Topic direkt im
-                  Browser öffnen.
-                </p>
-
-                <a
-                  class="button"
-                  href="https://ntfy.sh/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ntfy im Web öffnen
-                </a>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-number">2</div>
-
-              <div>
-                <strong>Topic abonnieren</strong>
-
-                <p>
-                  Verwende den in Court angezeigten persönlichen
-                  Topic und abonniere ihn im Webinterface.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </section>
-        
-
-        <!---Desktop--->
-        <section id="desktop">
-          <a href="#windows" class="remove-link"><h2>🖥️ Windows</h2></a>
-          <div class="steps">
-            <div class="step">
-              <div class="step-number">1a</div>
-              <div>
-                <strong>Inoffiziellen Client aus dem MS Store herunterladen</strong>
-                <p>
-                  Da es keinen offiziellen Desktop Client für ntfy gibt, kann man entweder die 
-                </p>
-                  <a class="button" href="#web">Web-App nutzen</a>
-                <p>
-                  (oberhalb) oder einen inoffiziellen Client, der virengeprüft wurde, aus dem Microsoft Store herunterladen.
-                </p>
-                <p>
-                  Um den Client zu nutzen folge den Schritten:
-                </p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-number">1b</div>
-              <div>
-                <strong>Den Client installieren</strong>
-                <p>
-                  1. Um den Client zu installieren klicke einfach auf diesen Link.
-                </p>
-                <br>
-                <p>
-                  2. Danach öffnet sich der Microsoft Store.
-                </p>
-                <br>
-                <p>
-                  3. Klicke nun auf Installieren, Herunterladen bzw. Download oder Install.
-                </p>
-                <!-- Der Button, der den direkten Installations-Prompt auslöst -->
-                <ms-store-badge 
-                  productid="9PJDD0JKR719" 
-                  window-mode="full" 
-                  theme="dark" 
-                  language="de"
-                  class="button">
-                </ms-store-badge>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-number">2</div>
-              <div>
-                <strong>Das ntfy Topic abonnieren</strong>
-                <p>
-                  Um das Topic zu abonnieren, gehe zurück in Court.
-                </p>
-                <a class="button" href="gwg-tennis-book.gwg-tennis-book.workers.dev/profile">Court öffnen</a>
-                
-                <p>Suche nach ntfy und aktiviere es und speichere es ab. Klicke danach auf den Button ntfy einrichten.</p>
-                <p>Wähle iPhone/iPad aus und kopiere das/die gewünschten Topic(s)</p>
-                <p>(Du kannst mit win + v deine Zwischenablage abrufen)</p>
-                <p>HINWEIS: Um ein LiveTicker Topic zu abonnieren, gehe entweder auf die LiveTicker Seite und kopiere das Topic oder nimm gwg-live-TTMMJJSSMM,also bspw. gwg-live-100220271630, da das Spiel am 10.02.2027 um 16:30 stattfindet.</p>
-              </div>
-            </div>
-            
-          </div>
-        </section>
-          
-
-        <!-- Andere Geräte -->
-        <section id="andere">
-        <a href="#andere" class="remove-link"><h2>❓ Andere Geräte / Clients</h2></a>
-
-          <p>
-            ntfy kann auch mit anderen kompatiblen Clients
-            verwendet werden. Öffne dein persönliches Topic in
-            Court und übernimm den dort angezeigten Topic-Namen
-            in den verwendeten Client.
-          </p>
-          <a class="button" href="https://gwg-tennis-book.gwg-tennis-book.workers.dev/profile">Court öffnen</a>
-
-          <p>
-            Ein Topic sieht beispielsweise so aus:
-          </p>
-
-          <pre>gwg-ntfy-1234567890abcdef1234567890abcdef</pre>
-
-          <h4>Eine mögliche Installationsart für Android Handys ohne Google Play Store über den F-Droid-Store.</h4>
-          <div class="step">
-            <div class="step-number">1</div>
-            <div>
-              <strong>APK Datei erhalten</strong>
-              <p>Um eine externe App auf Android zu installieren brauchst du eine APK Datei. Diese kannst du beispielswiese im F-Droid-Store erhalten oder über das offiziellen Github Repository.</p>
-              <p>Der Ersteller der App hat F-Droid auf seiner <span><a href="ntfy.sh">WEBSITE</a></span> verlinkt, daher wird diese Installationsquelle vorraussichtlich keinen Virus enthalten, jedoch handelt es sich nicht um eine vollständig gesicherte, seriöse Quelle.</p>
-              <a class="button" href="https://f-droid.org/en/packages/io.heckel.ntfy/">ntfy im F-Droid-Store installieren</a>
-            </div>
-          </div>
-          <br>
-          <div class="step">
-            <div class="step-number">2</div>
-            <div>
-              <strong>Installieren</strong>
-              <p>Nun muss man die APK installieren. Dafür gibt es sehr viele Möglichkeiten und Tutorials. Ich habe eins rausgesucht, jedoch geht jedes andere auch.</p>
-              <a class="button" href="https://www.heise.de/tipps-tricks/Externe-Apps-APK-Dateien-bei-Android-installieren-so-klappt-s-3714330.html">Heise Tutorial</a>
-            </div>
-          </div>
-          <br>
-          <div class="step">
-            <div class="step-number">3</div>
-            <div>
-              <strong>Einrichten von ntfy</strong>
-              <p>Um ntfy einzurichten folge einfach dem Android Guide ab Schritt 2. Das Prinzip ist das gleiche.</p>
-              <a class="button" href="#android">Zum Android Guide</a>
-            </div>
-            
-            
-            
-
-        </section>
-
-        <!-- Fehlerbehebung -->
-        <section id="fehler">
-          <h2>🛠️ Fehlerbehebung</h2>
-
-          <div class="faq-item">
-            <strong>
-              Ich bekomme keine Benachrichtigungen.
-            </strong>
-
-            <p>
-              Prüfe zunächst, ob ntfy auf deinem Gerät installiert
-              ist und Benachrichtigungen erlaubt sind. Sende
-              anschließend über Court eine Testbenachrichtigung.
-              Des Weiteren kann es sein, dass der Stummmodus aktiviert ist, kein Netz vorhanden oder ein Fokus aktiviert ist. Bitte deaktiviere den Stummmodus und den Fokus und probiere es, wenn du wieder Netz hast erneut. Ansonsten wende dich hierdran: <span><a href="mailto:gwg.tennmis.book@gmail.com">Email.</a></span>
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <strong>
-              Mein Topic funktioniert nicht mehr.
-            </strong>
-
-            <p>
-              Prüfe, ob dein Topic in Court noch unverändert ist.
-              Wenn ein Administrator dein Topic zurückgesetzt hat,
-              muss dein Gerät mit dem neuen Topic eingerichtet werden.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <strong>
-              Ich habe mein Topic versehentlich geteilt.
-            </strong>
-
-            <p>
-              Informiere einen Administrator oder mich 
-              <span>
-                <a href="mailto:gwg.tennis.book@gmail.com">HIER</a>
-              </span> und lass dein
-              persönliches Topic zurücksetzen. Danach muss ntfy
-              auf deinen Geräten neu eingerichtet werden.
-            </p>
-          </div>
-        </section>
-
-        <!-- Topic zurücksetzen -->
-        <section id="reset">
-          <h2>🔄 Topic zurücksetzen</h2>
-
-          <p>
-            Ein Topic sollte nur zurückgesetzt werden, wenn es
-            kompromittiert wurde oder nicht mehr verwendet werden soll.
-          </p>
-
-          <div class="notice">
-            <strong>Wichtig:</strong>
-            Nach einem Reset ist das bisherige Topic nicht mehr
-            mit deinem Court-Konto verknüpft. Bereits eingerichtete
-            Geräte müssen mit dem neuen Topic erneut eingerichtet werden.
-          </div>
-
-          <p>
-            Das Zurücksetzen kann ausschließlich durch einen
-            Administrator durchgeführt werden.
-          </p>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq">
-          <h2>❓ FAQ</h2>
-
-          <div class="faq-item">
-            <strong>Was ist ein ntfy-Topic?</strong>
-
-            <p>
-              Ein Topic ist der persönliche Kanal, über den deine
-              Benachrichtigungen zugestellt werden.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <strong>
-              Kann jemand anderes meinen Topic benutzen?
-            </strong>
-
-            <p>
-              Jeder, der deinen Topic kennt, kann grundsätzlich
-              mit diesem Kanal arbeiten. Deshalb solltest du ihn
-              wie ein Passwort behandeln und nicht
-              veröffentlichen.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <strong>Kostet ntfy etwas?</strong>
-
-            <p>
-              Für die hier beschriebene Nutzung wird der öffentliche
-              ntfy-Dienst verwendet. Für besondere Anwendungsfälle
-              solltest du die aktuellen Bedingungen des ntfy-Dienstes
-              prüfen.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <strong>Wo finde ich mein Topic?</strong>
-
-            <p>
-              In Court unter
-              <strong>
-                Profil → Benachrichtigungen → ntfy einrichten
-              </strong>.
-            </p>
-          </div>
-        </section>
-
-        <!-- Offizielle Dokumentation -->
-        <section>
-          <h2>📚 Weitere Informationen</h2>
-
-          <p>
-            Die offizielle Dokumentation von ntfy findest du hier:
-          </p>
-
-          <a
-            class="button"
-            href="https://docs.ntfy.sh/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Offizielle ntfy-Dokumentation öffnen
-          </a>
-        </section>
-
+    <header>
+      <div class="hero">
+        <div class="badge">Court · Einrichtung</div>
       </div>
-    </div>
-  </main>
+    </header>
 
-  <footer>
-    Court · ntfy-Anleitung · Diese Seite wurde über GitHub Pages veröffentlicht.
-  </footer>
-  
-  <script>
-function kopiereText() {
-  // Der Text, der kopiert werden soll
-  const text = 'curl -d "Test successful 😀" ntfy.sh/Dein_Topic';
-  navigator.clipboard.writeText(text).then(() => {
-    alert("Text wurde kopiert!");
-  }).catch(err => {
-    console.error("Fehler beim Kopieren: ", err);
-  });
-}
-</script>
+    <main>
 
-</body>
+      <div class="layout">
+
+        <div>
+
+          <section id="start">
+            <h2>Wähle deine Anleitung</h2>
+
+            <p>
+              Hier findest du Anleitungen zur Einrichtung der Court-Funktionen.
+              Wähle unten aus, womit du starten möchtest.
+            </p>
+
+            <div class="steps">
+
+              <div class="step">
+                <div class="step-number">1</div>
+
+                <div>
+                  <strong>ntfy einrichten</strong>
+
+                  <p>
+                    Richte Pushnachrichten für Mannschaftstermine,
+                    Vereinsneuigkeiten und wichtige Informationen ein.
+                  </p>
+                  <a class="button" href="/ntfy">Zur ntfy-Anleitung</a>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+
+                <div>
+                  <strong>Passkey einrichten</strong>
+
+                  <p>
+                    Richte einen Passkey ein, um dich schnell und sicher
+                    bei Court anzumelden.
+                  </p>
+                  <a class="button" href="/passkey">Zur Passkey-Anleitung</a>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      Court · Einrichtung · Diese Seite wurde über GitHub Pages veröffentlicht.
+    </footer>
+
+  </body>
 </html>
