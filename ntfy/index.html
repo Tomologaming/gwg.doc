@@ -1,35 +1,24 @@
 <!doctype html>
 
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="de"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta
 name="description"
 content="Anleitung zur Einrichtung von ntfy für Court"
 
->
 
-  <title>ntfy einrichten – Court</title>
 
-  <link rel="stylesheet" href="../style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
+
+<title>ntfy einrichten – Court</title>
+
+<link rel="stylesheet" href="../style.css"> <link rel="icon" href="favicon.ico" type="image/x-icon"> </head>
 
 <body>
 
-  <header>
-    <div class="hero">
-      <a class="remove-link" href="#grundlagen">
-        <div class="badge">Court · ntfy einrichten</div>
-      </a>
-    </div>
-  </header>
+<header> <div class="hero"> <a class="remove-link" href="#grundlagen"> <div class="badge">Court · ntfy einrichten</div> </a> </div> </header>
 
-  <main>
+<main>
 
-```
 <div class="layout">
 
   <!-- Inhaltsverzeichnis -->
@@ -539,5 +528,110 @@ content="Anleitung zur Einrichtung von ntfy für Court"
         </strong>
 
         <p>
-          Informiere einen Administr
-```
+          Informiere einen Administrator oder mich
+          <a href="mailto:gwg.tennis.book@gmail.com">HIER</a>
+          und lass dein persönliches Topic zurücksetzen.
+          Danach muss ntfy auf deinen Geräten neu eingerichtet werden.
+        </p>
+      </div>
+    </section>
+
+    <!-- Topic zurücksetzen -->
+    <section id="reset">
+      <h2>🔄 Topic zurücksetzen</h2>
+
+      <p>
+        Ein Topic sollte nur zurückgesetzt werden, wenn es
+        kompromittiert wurde oder nicht mehr verwendet werden soll.
+      </p>
+
+      <div class="notice">
+        <strong>Wichtig:</strong>
+        Nach einem Reset ist das bisherige Topic nicht mehr
+        mit deinem Court-Konto verknüpft. Bereits eingerichtete
+        Geräte müssen mit dem neuen Topic erneut eingerichtet werden.
+      </div>
+
+      <p>
+        Das Zurücksetzen kann ausschließlich durch einen
+        Administrator durchgeführt werden.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>❓ FAQ</h2>
+
+      <div class="faq-item">
+        <strong>Was ist ein ntfy-Topic?</strong>
+
+        <p>
+          Ein Topic ist der persönliche Kanal, über den deine
+          Benachrichtigungen zugestellt werden.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <strong>
+          Kann jemand anderes meinen Topic benutzen?
+        </strong>
+
+        <p>
+          Jeder, der deinen Topic kennt, kann grundsätzlich
+          mit diesem Kanal arbeiten. Deshalb solltest du ihn
+          wie ein Passwort behandeln und nicht veröffentlichen.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Kostet ntfy etwas?</strong>
+
+        <p>
+          Für die hier beschriebene Nutzung wird der öffentliche
+          ntfy-Dienst verwendet. Für besondere Anwendungsfälle
+          solltest du die aktuellen Bedingungen des ntfy-Dienstes
+          prüfen.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Wo finde ich mein Topic?</strong>
+
+        <p>
+          In Court unter
+          <strong>
+            Profil → Benachrichtigungen → ntfy einrichten
+          </strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Offizielle Dokumentation -->
+    <section>
+      <h2>📚 Weitere Informationen</h2>
+
+      <p>
+        Die offizielle Dokumentation von ntfy findest du hier:
+      </p>
+
+      <a
+        class="button"
+        href="https://docs.ntfy.sh/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Offizielle ntfy-Dokumentation öffnen
+      </a>
+    </section>
+
+  </div>
+</div>
+
+</main>
+
+<footer> Court · ntfy-Anleitung · Diese Seite wurde über GitHub Pages veröffentlicht. </footer>
+
+<script> function kopiereText() { const text = 'curl -d "Test successful 😀" ntfy.sh/Dein_Topic'; navigator.clipboard.writeText(text) .then(() => { alert("Text wurde kopiert!"); }) .catch(err => { console.error("Fehler beim Kopieren:", err); alert("Der Text konnte nicht kopiert werden."); }); } </script>
+
+</body>
+</html>
